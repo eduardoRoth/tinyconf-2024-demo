@@ -30,7 +30,7 @@ import { Character } from '../../models/rick-morty.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-characters',
+  selector: 'app-character',
   standalone: true,
   imports: [
     IonHeader,
