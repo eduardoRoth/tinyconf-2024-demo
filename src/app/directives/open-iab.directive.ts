@@ -1,11 +1,4 @@
-import {
-  afterNextRender,
-  Directive,
-  ElementRef,
-  HostListener,
-  inject,
-  OnInit,
-} from '@angular/core';
+import { Directive, ElementRef, HostListener, inject } from '@angular/core';
 import { Browser } from '@capacitor/browser';
 import { Device } from '@capacitor/device';
 
