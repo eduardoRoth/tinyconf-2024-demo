@@ -65,21 +65,6 @@ import { OpenIabDirective } from '../directives/open-iab.directive';
                     />
                   </a>
                 </ion-row>
-                <ion-row
-                  class="ion-justify-content-center ion-align-items-center"
-                >
-                  @for (tech of stack(); track 'name') {
-                    <ion-col size="auto">
-                      @if (tech.icon) {
-                        <ion-icon
-                          [name]="tech.icon"
-                          size="large"
-                          [color]="tech.color"
-                        ></ion-icon>
-                      }
-                    </ion-col>
-                  }
-                </ion-row>
                 <h2>Analog + Ionic + Capacitor</h2>
                 <h3>
                   The fullstack meta-framework for Angular, now powered with
@@ -142,18 +127,10 @@ export default class HomeComponent {
   private readonly toastCtrl = inject(ToastController);
   private readonly http = inject(HttpClient);
 
-  stack = signal([]);
   count = signal(0);
 
   increment() {
     this.count.update((value) => ++value);
-  }
-
-  open(url: string) {
-    Browser.open({
-      url,
-      presentationStyle: 'popover',
-    });
   }
 
   async showToast() {
